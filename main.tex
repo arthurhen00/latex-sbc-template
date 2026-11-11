@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\sloppy
+
+\title{Título do Artigo}
+\author{Nome do Autor\inst{1}}
+
+\address{Instituto ou Universidade\\
+  Cidade -- UF -- Brasil\\
+  \email{autor@example.com}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Summarize the problem, the method, and the main results of the paper.
+\end{abstract}
+
+\begin{resumo}
+Resuma o problema, o método e os principais resultados do artigo.
+\end{resumo}
+
+\input{secoes/introducao}
+\input{secoes/metodologia}
+\input{secoes/resultados}
+\input{secoes/conclusao}
+
+\bibliographystyle{sbc}
+% Separa mensagens do log para a detecção da bibliografia no latexmk 4.76.
+\typeout{}
+\bibliography{referencias}
+
+\end{document}
